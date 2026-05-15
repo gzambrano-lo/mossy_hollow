@@ -1,7 +1,7 @@
 /* Type Selectors */
 body {
     color: #582F0E;
-    font-family: "Poppins";;
+    font-family: "Poppins", fallback, generic;
     font-size: 0.9em;
 }
 
