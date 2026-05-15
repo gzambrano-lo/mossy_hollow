@@ -1,0 +1,61 @@
+/* Type Selectors */
+body {
+    color: #582F0E;
+    font-family: "Poppins" sans-serif;
+    font-size: 0.9em;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+/* ID OR Class Selector */
+#mossling {
+    color: #333D29;
+}
+
+#sporeling {
+    color: #8c3220;
+}
+
+#dewling {
+    color: #8aa8b8;
+}
+
+/* Relational Selector */
+nav a {
+    color: #7F4F24;
+    text-decoration: none;
+}
+
+#mossling h2 {
+    color: #333D29;
+}
+
+#sporeling h2 {
+    color: #6e2b18;
+}
+
+#dewling h2 {
+    color: #506e7a;
+}
+
+/* Combination Selector */
+h1,
+h2 {
+    color: #572C0F;
+}
+
+/* Attribute/Pseudo-class/Pseudo-element */
+nav a:hover {
+    color: #656D4A;
+    text-decoration: underline;
+}
+
+/* 
+EM / Font Sizes
+----------------
+1em = default size 
+0.9em = slightly smaller 
+0.8em = noticeably smaller
+*/
