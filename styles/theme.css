@@ -1,0 +1,119 @@
+/* MODULE 4 - Selectors */
+/* Type Selectors */
+body {
+    color: #582F0E;
+    font-family: "Poppins";
+    font-size: 0.9em;
+    background: url("../images/background/background.png") repeat;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+/* ID OR Class Selector */
+#mossling {
+    color: #333D29;
+}
+
+#sporeling {
+    color: #8c3220;
+}
+
+#dewling {
+    color: #8aa8b8;
+}
+
+/* Relational Selector */
+nav a {
+    color: #7F4F24;
+    text-decoration: none;
+}
+
+#mossling h2 {
+    color: #333D29;
+}
+
+#sporeling h2 {
+    color: #6e2b18;
+}
+
+#dewling h2 {
+    color: #506e7a;
+}
+
+/* Combination Selector */
+h1,
+h2 {
+    color: #572C0F;
+}
+
+/* Attribute/Pseudo-class/Pseudo-element */
+nav a:hover {
+    color: #656D4A;
+    text-decoration: underline;
+}
+
+/* 
+EM / Font Sizes
+----------------
+1em = default size 
+0.9em = slightly smaller 
+0.8em = noticeably smaller
+*/
+
+/* MODULE 5 - Box Model */
+
+/* Page Layout + Spacing */
+header {
+    padding: 2em;
+    margin: 1.5em;
+    background-color: #f7f3e8;
+    border: 0.2em solid #7F4F24;
+    border-radius: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 1.5em;
+    margin: 1.5em;
+}
+
+section {
+    padding: 1.5em;
+    margin-bottom: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1em;
+}
+
+/* Navigation Spacing*/
+nav ul {
+    padding: 1em;
+    margin-top: 1em;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+/* Image Border AND Spacing */
+img {
+    width: 40%;
+    max-width: 15rem;
+    border: 0.25em solid #656D4A;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: white;
+}
+
+/* Footer Gradient */
+footer {
+    margin-top: 2em;
+    position: absolute;
+    bottom: 0;
+    padding: 1em;
+    text-align: center;
+    background: linear-gradient(to right, #c2c5aa, #a4ac86);
+    border-top: 0.2em solid #582F0E;
+}
