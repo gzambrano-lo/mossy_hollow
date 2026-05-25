@@ -110,10 +110,16 @@ img {
 /* Footer Gradient */
 footer {
     margin-top: 2em;
-    position: absolute;
-    bottom: 0;
     padding: 1em;
     text-align: center;
     background: linear-gradient(to right, #c2c5aa, #a4ac86);
     border-top: 0.2em solid #582F0E;
+}
+
+/* Columns*/
+#display-images {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+    justify-items: center;
 }
