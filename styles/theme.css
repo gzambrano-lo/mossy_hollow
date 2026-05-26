@@ -119,7 +119,57 @@ footer {
 /* Columns*/
 #display-images {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     justify-items: center;
+}
+
+/* MODULE 6 */
+#about-columns {
+    /*This is the container for the about us columns*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+/*Link Styling*/
+a {
+    color: #333D29;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8c3220;
+    text-decoration: underline;
+}
+
+/* Media Queries: Adjust columns and images for smaller screens */
+@media (max-width: 768px) {
+
+    #about-columns,
+    #display-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    img {
+        width: 70%;
+    }
+}
+
+/*Small screen layout that stacks nav menu and content into one column */
+@media (max-width: 480px) {
+
+    #about-columns,
+    #display-images {
+        grid-template-columns: 1fr;
+    }
+
+    nav li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    img {
+        width: 90%;
+    }
 }
