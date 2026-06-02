@@ -21,7 +21,7 @@ h2 {
 }
 
 #dewling {
-    color: #8aa8b8;
+    color: #205069;
 }
 
 /* Relational Selector */
@@ -90,6 +90,7 @@ section {
 nav ul {
     padding: 1em;
     margin-top: 1em;
+    flex-wrap: wrap;
 }
 
 nav li {
@@ -109,7 +110,7 @@ img {
 
 /* Footer Gradient */
 footer {
-    margin-top: 2em;
+    margin-top: auto;
     padding: 1em;
     text-align: center;
     background: linear-gradient(to right, #c2c5aa, #a4ac86);
@@ -143,8 +144,68 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries: Adjust columns and images for smaller screens */
-@media (max-width: 768px) {
+/* MODULE 7 */
+
+/* Flexbox #1 nav menu */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    list-style-type: none;
+}
+
+nav li {
+    display: block;
+    margin: 0;
+}
+
+/* Flexbox #2 index.html */
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "welcome-hook welcome-hook welcome-hook"
+        "mossling sporeling dewling"
+        "back-to-top back-to-top back-to-top";
+    gap: 1em;
+}
+
+.welcome-hook {
+    grid-area: welcome-hook;
+}
+
+#mossling {
+    grid-area: mossling;
+}
+
+#sporeling {
+    grid-area: sporeling;
+}
+
+#dewling {
+    grid-area: dewling;
+}
+
+.back-to-top {
+    grid-area: back-to-top;
+}
+
+/*Media Queries*/
+
+/* Tablet and smaller */
+@media (max-width: 48rem) {
+    .home-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "welcome-hook"
+            "mossling"
+            "sporeling"
+            "dewling"
+            "back-to-top";
+    }
 
     #about-columns,
     #display-images {
@@ -156,20 +217,59 @@ a:hover {
     }
 }
 
-/*Small screen layout that stacks nav menu and content into one column */
-@media (max-width: 480px) {
+/* Small phones */
+@media (max-width: 30rem) {
 
     #about-columns,
     #display-images {
         grid-template-columns: 1fr;
     }
 
-    nav li {
-        display: block;
-        margin: 0.5em 0;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
     img {
         width: 90%;
     }
+}
+
+#mossling,
+#sporeling,
+#dewling {
+    text-align: center;
+}
+
+#mossling img,
+#sporeling img,
+#dewling img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Constructive Feedback: Anchor Footer to the bottom of the page */
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Constructive Feedback, Increase Link */
+.back-to-top {
+    text-align: center;
+}
+
+.back-to-top a {
+    font-weight: bold;
+    text-decoration: underline;
 }
