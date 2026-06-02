@@ -18,6 +18,7 @@
         rel="stylesheet">
     <!--link to external CSS file-->
     <link rel="stylesheet" href="../styles/theme.css">
+    <link rel="stylesheet" href="../styles/shop.css">
 </head>
 
 
@@ -61,6 +62,47 @@
                 alt="A line up of our products, including journals, stickers, washi tapes, stamps and thank you cards.">
             <img src="../images/products/stamp_set.png" alt="A set of our stamp designs.">
             <img src="../images/products/thank_you_cards.png" alt="A selection of our thank you cards.">
+        </section>
+
+        <section>
+            <h2>Shop Our Collection</h2>
+
+            <form action="#" method="get">
+
+                <fieldset>
+                    <legend>Customer Information</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Product Selection</legend>
+
+                    <label for="product">Choose a Product:</label>
+
+                    <select id="product" name="product">
+                        <option>Stamp Kit + Free Pen</option>
+                        <option>Journal + Pen + Washi Tape Kit </option>
+                        <option>Thank You Card Box Set</option>
+                        <option>Washi Tape (6 Pack)</option>
+                    </select><br><br>
+
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Order Request</legend>
+
+                    <input type="submit" value="Checkout">
+                    <input type="reset" value="Clear Form">
+                </fieldset>
+
+            </form>
         </section>
     </main>
 

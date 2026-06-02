@@ -77,7 +77,7 @@ The homepage includes a `main` element to hold the main content of the page.
 Example from `index.html`:
 
 ```html
-<main>
+<main class="home-grid">
 ```
 
 ### Footer Element
@@ -184,7 +184,7 @@ Examples from `styles/theme.css`:
 
 ```css
 #dewling {
-    color: #8aa8b8;
+    color: #205069;
 }
 ```
 
@@ -500,7 +500,7 @@ This link opens an external website in a new browser tab.
 
 The same-page placeholder links are located on the Home page in `index.html`.
 
-The “Meet the Hollows” section links to sections lower on the same page:
+The "Meet the Hollows" section links to sections lower on the same page:
 
 ```html
 <a href="#mossling">Mosslings</a>
@@ -519,7 +519,7 @@ These links jump to matching section IDs:
 There is also a Back to Top link:
 
 ```html
-<a href="#top">Click here</a>
+<a href="#top">Back to top</a>
 ```
 
 It links back to:
@@ -532,10 +532,20 @@ It links back to:
 
 The media queries are located in `styles/theme.css`.
 
-They adjust the layout at two screen-size breakpoints:
+They adjust the layout at two screen-size breakpoints using relative units:
 
 ```css
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
+    .home-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "welcome-hook"
+            "mossling"
+            "sporeling"
+            "dewling"
+            "back-to-top";
+    }
+
     #about-columns,
     #display-images {
         grid-template-columns: repeat(2, 1fr);
@@ -548,15 +558,15 @@ They adjust the layout at two screen-size breakpoints:
 ```
 
 ```css
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
     #about-columns,
     #display-images {
         grid-template-columns: 1fr;
     }
 
-    nav li {
-        display: block;
-        margin: 0.5em 0;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
     img {
@@ -605,3 +615,66 @@ This allows images to scale with the page while still having a maximum size.
 The HTML files include comments that label sections such as the header, navigation, main content, and footer.
 
 The CSS file includes comments that describe selectors, layout styling, link styling, columns, and media queries.
+
+## Module 7 Requirements
+
+### Flexbox Containers
+
+The website includes at least two flex containers.
+
+The navigation menu uses flexbox to arrange the links:
+
+```css
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    list-style-type: none;
+}
+```
+
+The page body also uses flexbox to keep the footer at the bottom of short pages:
+
+```css
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+```
+
+### Grid Layout
+
+The Home page uses a grid page layout with named grid areas:
+
+```css
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "welcome-hook welcome-hook welcome-hook"
+        "mossling sporeling dewling"
+        "back-to-top back-to-top back-to-top";
+    gap: 1em;
+}
+```
+
+The About and Shop pages also use grid components for their article columns and product images.
+
+### Responsive Breakpoints
+
+The site uses media queries at `48rem` and `30rem` to adjust grid layouts, image sizing, and navigation layout as the viewport gets smaller.
+
+### Complete Pages
+
+The site includes four complete pages with real content:
+
+- `index.html`
+- `pages/about.html`
+- `pages/shop.html`
+- `pages/contact.html`
