@@ -1,7 +1,7 @@
 /* The CSS for the form */
 
 fieldset {
-    margin-top:1em;
+    margin-top: 1em;
     margin-bottom: 1em;
     padding-top: .5em;
 }
@@ -13,7 +13,9 @@ legend {
     margin-bottom: 0.5em;
 }
 
-label, input, select {
+label,
+input,
+select {
     font-size: 90%;
 }
 
@@ -23,7 +25,8 @@ label {
     text-align: right;
 }
 
-input, select {
+input,
+select {
     width: 15em;
     margin-left: .5em;
     margin-bottom: .5em;
@@ -33,7 +36,7 @@ input:valid {
     border: 3px solid #a4ac86;
 }
 
-input: invalid {
+input:invalid {
     box-shadow: none;
 }
 
@@ -43,4 +46,99 @@ br {
 
 #buttons input {
     width: 10em;
+}
+
+/* Payment Methods */
+.payment-methods {
+    text-align: left;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: left;
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+.payment-icons i,
+.payment-icons svg {
+    color: #656D4A;
+    font-size: 3rem;
+}
+
+/*Table*/
+table {
+    width: 100%;
+    max-width: 65rem;
+    margin: 1.5em auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+caption {
+    margin-bottom: 0.75em;
+    font-weight: bold;
+    color: #572C0F;
+}
+
+th,
+td {
+    padding: 1.25em 1.25em;
+    text-align: left;
+    border-bottom: 0.1em solid #c2c5aa;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #c2c5aa;
+    color: #333D29;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(194, 197, 170, 0.25);
+}
+
+/*Product Images*/
+
+main section {
+    width: 100%;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#product-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    align-items: center;
+    justify-items: center;
+    padding: 2em;
+}
+
+#product-images img {
+    width: 100%;
+    max-width: 24rem;
+    border: 0.3em solid #656D4A;
+    border-radius: 1em;
+    padding: 0.75em;
+    background-color: white;
+}
+
+@media (max-width: 64rem) {
+    #product-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 40rem) {
+    #product-images {
+        grid-template-columns: 1fr;
+    }
 }

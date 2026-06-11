@@ -678,3 +678,26 @@ The site includes four complete pages with real content:
 - `pages/about.html`
 - `pages/shop.html`
 - `pages/contact.html`
+
+## Module 9 Peer Feedback Fixes
+
+### Peer Suggestion #1
+
+A peer suggested improving the footer placement so it stayed at the bottom of shorter pages.
+
+Fix implemented:
+I updated the page layout by using flexbox on the body and `margin-top: auto` on the footer.
+
+### Peer Suggestion #2
+
+A peer pointed out that the hyperlink that brings the user back to the top was difficult to recognize as a clickable element. This was because the hyperlink color did not contrast enough from the other body text in the card and other parts of the website, especially since Mossling's body font had a similar color.
+
+**Fix implemented:**  
+I updated the back-to-top link styling in `styles/theme.css` so the link is easier to identify. I made the link bold and underlined to improve visibility and make it clearer that the text is clickable.
+
+### Peer Suggestion #3
+
+A peer pointed out an accessibility issue on the home page. The Dewling section text color had a low color contrast score of 2.06-2.47, while the Web Content Accessibility Guidelines recommend a minimum contrast ratio of 4.5.
+
+**Fix implemented:**  
+I updated the Dewling text color in `styles/theme.css` to a darker shade so the section is easier to read and has better color contrast.
