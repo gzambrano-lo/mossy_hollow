@@ -261,6 +261,23 @@ main {
     padding: 1.5em;
 }
 
+/*Identifies the page currently being viewed */
+nav a[aria-current="page"] {
+    color: #333D29;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+}
+
+/* Visible keyboard focus indicator */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 0.2em solid #8c3220;
+    outline-offset: 0.2em;
+}
+
 @media (max-width: 48rem) {
     .creature-grid {
         grid-template-columns: repeat(2, 1fr);

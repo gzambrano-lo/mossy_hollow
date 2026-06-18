@@ -1,6 +1,9 @@
 # Mossy Hollow
 
-Mossy Hollow is a cozy stationery and collectibles website inspired by tiny forest creatures.
+Mossy Hollow is a fictional cozy stationery and collectibles website inspired by tiny forest creatures.
+
+Repository: https://github.com/gzambrano-lo/mossy_hollow
+Live site: https://gzambrano-lo.github.io/mossy_hollow/
 
 ## Module 3 Requirements
 
